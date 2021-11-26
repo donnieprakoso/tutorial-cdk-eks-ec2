@@ -23,6 +23,7 @@ class K8SPipelineStack(core.Stack):
                                                  'github-token'),
                                              owner='donnieprakoso',
                                              repo='tutorial-cdk-eks-ec2',
+                                             branch='main',
                                              trigger=cpactions.GitHubTrigger.POLL),
 
                                          synth_action=pipelines.SimpleSynthAction(
