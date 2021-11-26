@@ -29,5 +29,5 @@ class K8SPipelineStack(core.Stack):
                                          synth_action=pipelines.SimpleSynthAction(
                                              source_artifact=source_artifact,
                                              cloud_assembly_artifact=cloud_assembly_artifact,
-                                             install_command='npm install -g aws-cdk && pip install -r requirements.txt',
+                                             install_command='npm install -g aws-cdk && npm install -g cdk8s-cli && cd k8s-cluster-ec2 && pip install -r requirements.txt',
                                              synth_command='cdk synth'))
